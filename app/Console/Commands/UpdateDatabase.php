@@ -34,6 +34,7 @@ class UpdateDatabase extends Command
 
         foreach ($products as $product) {
             $productArray[] = [
+                'id' => $product->id,
                 'name' => $product->name,
                 'price' => $product->price,
                 'description' => $product->description,

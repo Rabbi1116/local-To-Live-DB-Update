@@ -35,7 +35,8 @@ class ProductController extends Controller
     public function syncDatabase(Request $req)
     {
         try {
-            $test =  Product::upsert($req->product, ['name'], ['name', 'price', 'description']);
+            Product::truncate();
+            $test =  Product::upsert($req->product, ['name', 'id'], ['name', 'price', 'description']);
             return  $test;
         } catch (\Throwable $th) {
             DB::rollback();
