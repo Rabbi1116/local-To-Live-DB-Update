@@ -130,9 +130,9 @@
         <hr>
         <table border="1" style="width:100%">
             <tr>
-                <th>Company</th>
-                <th>Contact</th>
-                <th>Country</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Description</th>
             </tr>
             @foreach ($products as $product)
                 <tr>

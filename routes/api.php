@@ -19,4 +19,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/product-syncDatabase', [ProductController::class, 'syncDatabase'])->name('syncDatabase');
+Route::post('/product-syncDatabase', [ProductController::class, 'syncDatabase'])->name('syncDatabase');

@@ -39,6 +39,7 @@ class UpdateDatabase extends Command
                 'description' => $product->description,
             ];
         }
-        Http::get(env('APP_URL') . '/api/product-syncDatabase', $productArray);
+        $local =  Http::post('http://127.0.0.1:8000/api/product-syncDatabase', ['product' => $productArray]);
+        dd($local);
     }
 }
