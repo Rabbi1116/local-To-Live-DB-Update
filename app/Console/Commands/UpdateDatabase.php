@@ -39,7 +39,7 @@ class UpdateDatabase extends Command
                 'description' => $product->description,
             ];
         }
-        $local =  Http::post('http://127.0.0.1:8000/api/product-syncDatabase', ['product' => $productArray]);
+        $local =  Http::post('http://demo.zoomopticsuttara.com/api/product-syncDatabase', ['product' => $productArray]);
         dd($local);
     }
 }
